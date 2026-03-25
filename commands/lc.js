@@ -66,21 +66,21 @@ module.exports = {
       });
     }
 
-    // Embed z poprawnym formatowaniem
+    // Embed - wszystkie wartości pogrubione
     const embed = new EmbedBuilder()
       .setTitle(`**\`ROBUX SHOP™ × LEGIT CHECK\`**`)
       .setDescription(
         '🔵 **INFORMACJE O ZAMÓWIENIU:**\n' +
         `  - ✅ **Produkt:** **${produkt}**\n` +
-        `  - 📦 **Ilość:** \`${ilosc} szt.\`\n` +
-        `  - 💰 **Kwota:** \`${cenaFormat} PLN\`\n` +
-        `  - 💳 **Metoda płatności:** \`${metoda}\`\n\n` +
+        `  - 📦 **Ilość:** **${ilosc} szt.**\n` +
+        `  - 💰 **Kwota:** **${cenaFormat} PLN**\n` +
+        `  - 💳 **Metoda płatności:** **${metoda}**\n\n` +
         '✅ **KUPUJĄCY**\n' +
         `  👤 ${kupujacy.toString()}\n` +
-        `  🆔 \`${kupujacy.tag}\`\n\n` +
+        `  🆔 **${kupujacy.tag}**\n\n` +
         '✅ **SPRZEDAJĄCY**\n' +
         `  👑 <@${CONFIG.ownerId}>\n` +
-        `  🆔 \`${interaction.user.tag}\``
+        `  🆔 **${interaction.user.tag}**`
       )
       .setColor(0x2ECC71)
       .setImage('https://image2url.com/r2/default/images/1774452623960-e1552b94-c05b-4608-9d00-1893942ce418.png')
@@ -89,8 +89,10 @@ module.exports = {
         iconURL: interaction.client.user.displayAvatarURL()
       });
 
+    // Wysłanie embeda
     await targetChannel.send({ embeds: [embed] });
 
+    // Potwierdzenie
     await interaction.reply({
       content: `✅ **Legit Check został wysłany!**\n📨 Kanał: ${targetChannel.toString()}`,
       ephemeral: true
