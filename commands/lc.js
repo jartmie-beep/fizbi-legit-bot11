@@ -66,26 +66,29 @@ module.exports = {
       });
     }
 
-    // ELEGANCKI STYL LEGIT CHECK Z TWOIM NOWYM ZDJĘCIEM
+    // ==========================================
+    // KOMPAKTOWY, NISKI EMBED (TAKI JAK NA ZDJĘCIU)
+    // ==========================================
+
     const embed = new EmbedBuilder()
       .setTitle('**ROBUX SHOP**™ × **LEGIT CHECK**')
       .setDescription(
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-        '📋 **INFORMACJE O ZAMÓWIENIU**\n\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        '📋 **INFORMACJE O ZAMÓWIENIU**\n' +
         `> 💳 **Produkt:** \`${produkt}\`\n` +
         `> 📦 **Ilość:** \`${ilosc} szt.\`\n` +
         `> 💰 **Kwota:** \`${cenaFormat} PLN\`\n` +
-        `> 💸 **Metoda płatności:** \`${metoda}\`\n\n` +
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-        '👤 **KUPUJĄCY**\n\n' +
+        `> 💸 **Metoda płatności:** \`${metoda}\`\n` +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        '👤 **KUPUJĄCY**\n' +
         `> ${kupujacy.toString()}\n` +
-        `> \`${kupujacy.tag}\`\n\n` +
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-        '🛒 **SPRZEDAJĄCY**\n\n' +
+        `> \`${kupujacy.tag}\`\n` +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        '🛒 **SPRZEDAJĄCY**\n' +
         `> <@${CONFIG.ownerId}>\n` +
-        `> \`${interaction.user.tag}\`\n\n` +
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
-        '✅ **STATUS**\n\n' +
+        `> \`${interaction.user.tag}\`\n` +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n' +
+        '✅ **STATUS**\n' +
         '> `Transakcja zweryfikowana pomyślnie`'
       )
       .setColor(0x2ECC71)
