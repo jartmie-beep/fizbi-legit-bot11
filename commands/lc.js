@@ -67,21 +67,23 @@ module.exports = {
     }
 
     // ==========================================
-    // STYL Z SZARYMI TŁAMI (inline code)
+    // FINALNA WERSJA - inline code + pogrubienie na tytule
+    // produkt pogrubiony (taka sama czcionka jak nagłówek)
+    // wszystko złączone bez zbędnych linii
     // ==========================================
 
     const embed = new EmbedBuilder()
-      .setTitle('✅ **ROBUX SHOP**™ × **LEGIT CHECK**')
+      .setTitle(`**\`ROBUX SHOP™ × LEGIT CHECK\`**`)
       .setDescription(
-        '🔵 **INFORMACJE O ZAMÓWIENIU:**\n' +
-        `  - ✅ **Produkt:** \`${produkt}\`\n` +
-        `  - 📦 **Ilość:** \`${ilosc} szt.\`\n` +
-        `  - 💰 **Kwota:** \`${cenaFormat} PLN\`\n` +
-        `  - 💳 **Metoda płatności:** \`${metoda}\`\n\n` +
-        '✅ **KUPUJĄCY**\n' +
+        '**INFORMACJE O ZAMÓWIENIU:**\n' +
+        `  - **Produkt:** **${produkt}**\n` +
+        `  - **Ilość:** \`${ilosc} szt.\`\n` +
+        `  - **Kwota:** \`${cenaFormat} PLN\`\n` +
+        `  - **Metoda płatności:** \`${metoda}\`\n\n` +
+        '**KUPUJĄCY**\n' +
         `  ${kupujacy.toString()}\n` +
         `  \`${kupujacy.tag}\`\n\n` +
-        '✅ **SPRZEDAJĄCY**\n' +
+        '**SPRZEDAJĄCY**\n' +
         `  <@${CONFIG.ownerId}>\n` +
         `  \`${interaction.user.tag}\``
       )
