@@ -66,10 +66,7 @@ module.exports = {
       });
     }
 
-    // ==========================================
-    // FINALNA WERSJA - produkt pogrubiony
-    // ==========================================
-
+    // Embed z poprawnym formatowaniem
     const embed = new EmbedBuilder()
       .setTitle(`**\`ROBUX SHOP™ × LEGIT CHECK\`**`)
       .setDescription(
@@ -92,10 +89,8 @@ module.exports = {
         iconURL: interaction.client.user.displayAvatarURL()
       });
 
-    // Wysłanie embeda
     await targetChannel.send({ embeds: [embed] });
 
-    // Potwierdzenie
     await interaction.reply({
       content: `✅ **Legit Check został wysłany!**\n📨 Kanał: ${targetChannel.toString()}`,
       ephemeral: true
