@@ -67,8 +67,7 @@ module.exports = {
     }
 
     // ==========================================
-    // ABSOLUTNIE FINALNA WERSJA
-    // WSZYSTKIE EMOJI + POGUBIENIA + INLINE CODE
+    // FINALNA WERSJA - produkt pogrubiony
     // ==========================================
 
     const embed = new EmbedBuilder()
