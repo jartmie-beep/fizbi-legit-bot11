@@ -66,15 +66,15 @@ module.exports = {
       });
     }
 
-    // Embed - ZIELONA EMOTKA PRZED TYTUŁEM
+    // Embed - RÓŻNE EMOJI DLA KAŻDEJ POZYCJI (wzór YEZZ SHOP)
     const embed = new EmbedBuilder()
       .setTitle(`✅ \`\`\`ROBUX SHOP™ × LEGIT CHECK\`\`\``)
       .setDescription(
         '**INFORMACJE O ZAMÓWIENIU:**\n' +
         `  ✅ **Produkt:** **${produkt}**\n` +
-        `  ✅ **Ilość:** **${ilosc} szt.**\n` +
-        `  ✅ **Kwota:** **${cenaFormat} PLN**\n` +
-        `  ✅ **Metoda płatności:** **${metoda}**\n\n` +
+        `  ❌ **Ilość:** **${ilosc} szt.**\n` +
+        `  ⚠️ **Kwota:** **${cenaFormat} PLN**\n` +
+        `  🏦 **Metoda płatności:** **${metoda}**\n\n` +
         '**KUPUJĄCY**\n' +
         `  👤 ${kupujacy.toString()}\n\n` +
         '**SPRZEDAJĄCY**\n' +
