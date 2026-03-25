@@ -66,18 +66,18 @@ module.exports = {
       });
     }
 
-    // Embed - BEZ ID, WIĘKSZY INLINE CODE NA TYTULE
+    // Embed - ZIELONA EMOTKA PRZED TYTUŁEM
     const embed = new EmbedBuilder()
-      .setTitle(`**\`\`\`ROBUX SHOP™ × LEGIT CHECK\`\`\`**`)
+      .setTitle(`✅ \`\`\`ROBUX SHOP™ × LEGIT CHECK\`\`\``)
       .setDescription(
-        '🔵 **INFORMACJE O ZAMÓWIENIU:**\n' +
-        `  - ✅ **Produkt:** **${produkt}**\n` +
-        `  - 📦 **Ilość:** **${ilosc} szt.**\n` +
-        `  - 💰 **Kwota:** **${cenaFormat} PLN**\n` +
-        `  - 💳 **Metoda płatności:** **${metoda}**\n\n` +
-        '✅ **KUPUJĄCY**\n' +
+        '**INFORMACJE O ZAMÓWIENIU:**\n' +
+        `  ✅ **Produkt:** **${produkt}**\n` +
+        `  ✅ **Ilość:** **${ilosc} szt.**\n` +
+        `  ✅ **Kwota:** **${cenaFormat} PLN**\n` +
+        `  ✅ **Metoda płatności:** **${metoda}**\n\n` +
+        '**KUPUJĄCY**\n' +
         `  👤 ${kupujacy.toString()}\n\n` +
-        '✅ **SPRZEDAJĄCY**\n' +
+        '**SPRZEDAJĄCY**\n' +
         `  👑 <@${CONFIG.ownerId}>`
       )
       .setColor(0x2ECC71)
