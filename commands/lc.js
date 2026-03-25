@@ -67,47 +67,42 @@ module.exports = {
     }
 
     // ==========================================
-    // ESTETYCZNY EMBED - POPRAWIONA WERSJA
+    // WYRAŹNY I OSTRA WERSJA EMBEDA
     // ==========================================
 
     const embed = new EmbedBuilder()
-      .setTitle('🛡️ **ROBUX SHOP** ┃ **LEGIT CHECK**')
+      .setTitle('**ROBUX SHOP**™ × **LEGIT CHECK**')
       .setDescription(
-        '‎\n' +
-        '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n' +
-        '‎\n' +
-        '📦 **INFORMACJE O ZAMÓWIENIU**\n' +
-        '‎\n' +
-        `> 💳 **Produkt** ─── \`${produkt}\`\n` +
-        `> 📦 **Ilość** ─── \`${ilosc} szt.\`\n` +
-        `> 💰 **Kwota** ─── \`${cenaFormat} PLN\`\n` +
-        `> 💸 **Metoda** ─── \`${metoda}\`\n` +
-        '‎\n' +
-        '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n' +
-        '‎\n' +
-        '🌿 **KUPUJĄCY**\n' +
-        '‎\n' +
-        `> 👤 ${kupujacy.toString()}\n` +
-        `> 🆔 \`${kupujacy.tag}\`\n` +
-        `> 📍 \`ID: ${kupujacy.id}\`\n` +
-        '‎\n' +
-        '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n' +
-        '‎\n' +
-        '🛒 **SPRZEDAJĄCY**\n' +
-        '‎\n' +
-        `> 👑 <@${CONFIG.ownerId}>\n` +
-        `> 🆔 \`${interaction.user.tag}\`\n` +
-        `> 📍 \`ID: ${CONFIG.ownerId}\`\n` +
-        '‎\n' +
-        '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n' +
-        '‎\n' +
-        '✅ **STATUS** ─── `ZWERYFIKOWANO`'
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+        '📋 **INFORMACJE O ZAMÓWIENIU**\n\n' +
+        '┌────────────────────────────────────────┐\n' +
+        `│ 💳 **PRODUKT**      →  **${produkt}**\n` +
+        `│ 📦 **ILOŚĆ**        →  **${ilosc}**\n` +
+        `│ 💰 **KWOTA**        →  **${cenaFormat} PLN**\n` +
+        `│ 💸 **METODA**       →  **${metoda}**\n` +
+        '└────────────────────────────────────────┘\n\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+        '👤 **KUPUJĄCY**\n\n' +
+        '┌────────────────────────────────────────┐\n' +
+        `│ 👑 ${kupujacy.toString()}\n` +
+        `│ 🆔 **${kupujacy.tag}**\n` +
+        `│ 📍 **ID:** ${kupujacy.id}\n` +
+        '└────────────────────────────────────────┘\n\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+        '🛒 **SPRZEDAJĄCY**\n\n' +
+        '┌────────────────────────────────────────┐\n' +
+        `│ 👑 <@${CONFIG.ownerId}>\n` +
+        `│ 🆔 **${interaction.user.tag}**\n` +
+        `│ 📍 **ID:** ${CONFIG.ownerId}\n` +
+        '└────────────────────────────────────────┘\n\n' +
+        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n' +
+        '✅ **STATUS**        →  **ZWERYFIKOWANO POMYŚLNIE**'
       )
       .setColor(0x2ECC71)
       .setThumbnail('https://cdn.discordapp.com/emojis/890915534319894548.png')
       .setImage('https://image2url.com/r2/default/images/1774449217451-e330583a-359f-41a2-b7e0-8300eab4e4b7.jpg')
       .setFooter({
-        text: `✅ Legit Check • ${new Date().toLocaleString('pl-PL')}`,
+        text: `✅ Legit Check • ${new Date().toLocaleString('pl-PL', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}`,
         iconURL: interaction.client.user.displayAvatarURL()
       })
       .setTimestamp();
